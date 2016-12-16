@@ -1,24 +1,49 @@
 # Important!
 **layouts** and **inc** directories are not included in the gulp pipeline. Don't forget to include them if you want to use them.
 
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
-_s
-===
-
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
-
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+### Bootstrap 3 navigation
+**An example using [wp_bootstrap_navwalker.php](https://github.com/twittem/wp-bootstrap-navwalker)** - 
+[Refrence](http://seegatesite.com/create-wordpress-theme-with-bootstrap-and-underscores-step-by-step/)
+```
+<nav class="navbar navbar-inverse " role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div><!--end navbar-header-->
+        <div class="collapse navbar-collapse menu-primary" id="bs-example-navbar-collapse-1">
+            <?php
+            wp_nav_menu( array(
+                'menu'              => '',
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => '',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker())
+            );
+            ?>
+            <div class="col-sm-3 col-md-3 pull-right search-navbar">
+                <form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
+                    <div class="input-group">
+                        <input type="text" id="searchbox" class="form-control" placeholder="Search" name="s" id="s">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default"  id="searchsubmit"  type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!--end navbar-colapse-->
+    </div><!--end container-->
+</nav>
+```
 
 Getting Started
 ---------------
