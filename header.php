@@ -19,8 +19,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body data-grid-framework="b3" data-grid-color="black" data-grid-opacity="0.3" data-grid-zindex="999"
-          data-grid-gutterwidth="30px" data-grid-nbcols="12" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'my-blog' ); ?></a>
 
@@ -43,21 +42,8 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'my-blog' ); ?></button>
-			 <?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-        		'container_id'      => 'main-navbar-collapse',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-        ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
-		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
