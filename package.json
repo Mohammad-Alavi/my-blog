@@ -1,0 +1,31 @@
+{
+  "name": "personal-wordpress-web-dev-template",
+  "version": "0.1.0",
+  "description": "A personal template of my WordPress web development workflow to use as a starting point for other WordPress projects.",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "keywords": [
+    "template",
+    "workflow",
+    "web",
+    "WordPress"
+  ],
+  "author": "Mohammad Alavi",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.2.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-cssimport": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jquery": "^3.1.1"
+  }
+}
