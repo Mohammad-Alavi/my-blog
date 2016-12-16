@@ -1,10 +1,10 @@
 {
-  "name": "personal-wordpress-web-dev-template",
+  "name": "my-blog",
   "version": "0.1.0",
-  "description": "A personal template of my WordPress web development workflow to use as a starting point for other WordPress projects.",
+  "description": "A WordPress Base theme based on _s theme for my WordPress web development workflow.",
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/Mohammad-Alavi/my-blog.git"
   },
   "keywords": [
     "template",
