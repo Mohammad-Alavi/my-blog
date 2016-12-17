@@ -36,7 +36,7 @@ if (env === 'development') {
     sassStyle = 'compressed';
 }
 // add all the .js files here
-jsSources = ['components/scripts/jquery.js', 'components/scripts/bootstrap.js', 'components/scripts/google_analytics.js', 'components/scripts/customizer.js', 'components/scripts/navigation.js', 'components/scripts/skip-link-focus-fix.js'];
+jsSources = ['components/scripts/jquery.js', 'components/scripts/google_analytics.js', 'components/scripts/customizer.js', 'components/scripts/navigation.js', 'components/scripts/skip-link-focus-fix.js'];
 sassSources = ['components/sass/style.scss'];
 phpSources = ['./*.php', 'template-parts/*.php'];
 
